@@ -1,18 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import GoogleAuth from './GoogleAuth';
 
 const Header = () => {
   return (
     <div className="ui secondary pointing menu">
-      <Link href="/" className="item">
+      <Link to="/" className="item">
         Streamy
       </Link>
       <div className="right menu">
-        <Link href="/streams/show" className="item">
+        <Link to="/streams/show" className="item">
           All Streams
         </Link>
-        <Link href="/" className="item">
-            Logout
+        <Link to="/" className="item">
+            <GoogleAuth />
         </Link>
       </div>
     </div>
